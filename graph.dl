@@ -1,0 +1,9 @@
+.decl edge(from: symbol, to: symbol)
+.decl connected(A: symbol, B: symbol)
+
+.input edge
+
+.output connected
+
+connected(A, B) :- edge(A, B).
+connected(A, B) :- edge(A, C), connected(C, B).        
